@@ -1,26 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Venobox from 'venobox'
+import { Fade } from 'react-reveal'
 
 export default function Promo() {
+  useEffect(() => {
+    new Venobox({
+      spinner: 'wander',
+      ratio: 'full',
+    })
+  }, [])
   return (
-    <section name='video-part' id='video-part'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-lg-2 m-auto'>
-            <div className='video-icon text-center'>
-              <a
-                className='venobox'
-                data-autoplay='true'
-                data-vbtype='video'
-                href='https://youtu.be/9KqUlIY2Aew'
-              >
-                <i className='fab fa-youtube video-i'></i>
-              </a>
+    <Fade duration={1000} delay={500}>
+      <section name='video-part' id='video-part'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-2 m-auto'>
+              <div className='video-icon text-center'>
+                <a
+                  className='venobox'
+                  data-autoplay='true'
+                  data-vbtype='video'
+                  href='https://youtu.be/9KqUlIY2Aew'
+                >
+                  <i className='fab fa-youtube video-i'></i>
+                </a>
 
-              <h3>WATCH OUR STORY</h3>
+                <h3>WATCH OUR STORY</h3>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Fade>
   )
 }

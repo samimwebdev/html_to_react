@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollToTop from '../ScrollToTop.jsx'
 import BottomFooter from './BottomFooter'
 
 export default function Footer() {

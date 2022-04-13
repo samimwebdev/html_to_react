@@ -78,7 +78,7 @@ ul{
 
 }
 .banner-text a{
-    border: 1px solid#00e0d0;
+    border: 1px solid #00e0d0;
     color: #00e0d0;
     padding: 16px 30px;
     font-weight: bold;
@@ -104,6 +104,7 @@ ul{
 }
 .slick-dots li{
     display: inline-block;
+    position: static;
     margin-right: 10px;
     width: 20px;
     height: 20px;
@@ -124,7 +125,7 @@ ul{
     transition: 0.5s all ease !important;
 }
 .slick-dots li.slick-active button{
-    opacity: 1;
+    opacity: 1 !important;
 
 }
 /* banner part end */
@@ -153,7 +154,7 @@ ul{
     padding-bottom: 30px;
 }
 .about-text a{
-    border: 1px solid#00e0d0;
+    border: 1px solid #00e0d0;
     color: #00e0d0;
     padding: 16px 30px;
     font-weight: bold;
@@ -190,7 +191,7 @@ ul{
     height: 90px;
     line-height: 90px;
     border-radius: 50%;
-    border: 3px solid#ffffff;
+    border: 3px solid #ffffff;
     cursor: pointer;
 }
 .video-icon h3{
@@ -338,7 +339,7 @@ transform: translateX(-50%);
     font-weight: 300;
 }
 .team-bottom-text a{
-    border: 1px solid#00e0d0;
+    border: 1px solid #00e0d0;
     color: #00e0d0;
     padding: 16px 30px;
     font-weight: bold;  
@@ -352,7 +353,7 @@ transform: translateX(-50%);
 }
 .team-slider .slick-dots{
     position: absolute;
-    bottom: 30px;
+    bottom: -40px;
     left: -2px;
    
 }
@@ -460,8 +461,8 @@ transform: translateX(-50%);
 	position: absolute;
 	z-index: 100;
 	color: #ffffff;
-	top: 77%;
-	left: 26%;
+	top: 35%;
+	left: -10%;
 	font-size: 20px;
 	cursor: pointer;
 }
@@ -469,8 +470,8 @@ transform: translateX(-50%);
 	position: absolute;
 	z-index: 100;
 	color: #ffffff;
-	top: 77%;
-	right: 28%;
+	top: 35%;
+	right: -10%;
 	font-size: 20px;
 	cursor: pointer;
 }
@@ -625,6 +626,14 @@ transform: translateX(-50%);
     font-size: 14px;
 }
 /* footer part end */
+
+/* sticky Top */
+img.scrollTopImg {
+    position: fixed;
+    z-index: 9999;
+    right: 16px;
+    bottom: 10px;
+}
 
 
 /* type.css */
