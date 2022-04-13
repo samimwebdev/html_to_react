@@ -10,9 +10,12 @@ import Promo from './sections/Promo'
 import Services from './sections/Services'
 import Teams from './sections/Teams'
 
+import GlobalStyle from './styles/Global'
+
 function App() {
   return (
     <Layout>
+      <GlobalStyle />
       <Home />
       <About />
       <Promo />

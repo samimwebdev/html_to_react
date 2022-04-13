@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react'
 
 export default function Contact() {
   const [state, handleSubmit] = useForm('xnqwgdwy')
-  console.log(state.errors)
+
   if (state.succeeded) {
     return <p>Thanks for joining!</p>
   }
@@ -90,7 +90,7 @@ export default function Contact() {
                 <h3>OUR HAPPY CLIENT</h3>
               </div>
               <div className='row text-center'>
-                <Fade delay={500} duration={1000} cascade>
+                <Fade delay={500} duration={2000} cascade>
                   <div className='col-lg-6 col-md-6 col-sm-6 pb-5'>
                     <img
                       src='img/logo1.png'
