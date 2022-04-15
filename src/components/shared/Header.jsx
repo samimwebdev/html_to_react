@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-scroll'
 
 export default function Header() {
+  const elm = useRef()
+
+  function handleScroll(evt) {
+    const scrolledValue = window.scrollY
+    if (scrolledValue >= 600) {
+      elm.current.classList.add('nav-bg')
+      document.querySelector('.scrollTopIcon').classList.add('visible')
+    } else {
+      elm.current.classList.remove('nav-bg')
+      document.querySelector('.scrollTopIcon').classList.remove('visible')
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
-    <nav className='navbar navbar-expand-lg navbar-light stciky-top'>
+    <nav className='navbar navbar-expand-lg navbar-light sticky-top' ref={elm}>
       <div className='container ms'>
         <a className='navbar-brand' href='#'>
           <img src='img/main-logo.png' alt='main-logo' className='img-fluid' />

@@ -1,6 +1,11 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import Venobox from 'venobox'
 export default function Projects() {
+  useEffect(() => {
+    new Venobox({
+      spinner: 'wave',
+    })
+  }, [])
   return (
     <section name='project' id='project'>
       <div className='container'>

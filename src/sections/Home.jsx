@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
+import Typed from 'react-typed'
 
 export default function Home() {
   const settings = {
@@ -9,6 +10,37 @@ export default function Home() {
     slidesToShow: 1,
     slidesToScroll: 1,
   }
+  const typedStrings = [
+    'Complete Graphics Designer.',
+    'Creative Designer.',
+    'Complete Front End developer.',
+    'Complete back End developer',
+  ]
+  const options = {
+    // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+    stringsElement: null,
+    // typing speed
+    typeSpeed: 50,
+    // time before typing starts
+    startDelay: 500,
+    // backspacing speed
+    backSpeed: 50,
+    // time before backspacing
+    backDelay: 500,
+    // loop
+    loop: true,
+    // false = infinite
+    loopCount: 100,
+    // show cursor
+    showCursor: false,
+    // character for cursor
+    cursorChar: '|',
+    // attribute to type (null == text)
+    attr: null,
+    // either html or text
+    contentType: 'html',
+  }
+
   return (
     <section id='banner-part' name='banner-part'>
       <div className='container'>
@@ -17,7 +49,10 @@ export default function Home() {
             <div className='col-lg-10 m-auto'>
               <div className='banner-text text-center'>
                 <h2>
-                  We Are <span className='typed'></span>
+                  We Are{' '}
+                  <span className='typed'>
+                    <Typed strings={typedStrings} {...options} />
+                  </span>
                 </h2>
                 <p>
                   This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
