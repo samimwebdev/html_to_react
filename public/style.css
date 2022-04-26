@@ -656,3 +656,17 @@ img.scrollTopImg {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
+
+.activeFilterBtn{
+    background-color: palevioletred !important;
+    color: white !important;
+}
+.activeFilterBtn:focus{
+    outline: none !important;
+}
+.activeFilterBtn:active {
+    border-color: palevioletred !important;
+    outline: none;
+
+}

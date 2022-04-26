@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Fade } from 'react-reveal'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import serviceData from '../data/serviceData'
 
 const Wrapper = styled(SectionWrapper)`
   p {
@@ -63,66 +64,23 @@ export default function Services() {
           animate={controls}
           className='row'
         >
-          <motion.div variants={childVariants} className='col-lg-4'>
-            <div className='service-text text-center'>
-              <img src='img/icon1.png' alt='icon' className='img-fluid' />
-              <h5>WEB DESIGN & DEVELOPMENT</h5>
-              <p>
-                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                vel velit auctor aliquet Aenean.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div variants={childVariants} className='col-lg-4'>
-            <div className='service-text text-center'>
-              <img src='img/icon2.png' alt='icon' className='img-fluid' />
-              <h5>BRANDING IDENTITY</h5>
-              <p>
-                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                vel velit auctor aliquet Aenean.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div variants={childVariants} className='col-lg-4'>
-            <div className='service-text text-center'>
-              <img src='img/icon3.png' alt='icon' className='img-fluid' />
-              <h5>MOBILE APP</h5>
-              <p>
-                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                vel velit auctor aliquet Aenean.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div variants={childVariants} className='col-lg-4'>
-            <div className='service-text text-center'>
-              <img src='img/icon4.png' alt='icon' className='img-fluid' />
-              <h5>SEARCH ENGINE OPTIMIZATION</h5>
-              <p>
-                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                vel velit auctor aliquet Aenean.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div variants={childVariants} className='col-lg-4'>
-            <div className='service-text text-center'>
-              <img src='img/icon5.png' alt='icon' className='img-fluid' />
-              <h5>GAME DEVELOPMENT</h5>
-              <p>
-                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                vel velit auctor aliquet Aenean.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div variants={childVariants} className='col-lg-4'>
-            <div className='service-text text-center'>
-              <img src='img/icon6.png' alt='icon' className='img-fluid' />
-              <h5>MADE WITH LOVE</h5>
-              <p>
-                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                vel velit auctor aliquet Aenean.
-              </p>
-            </div>
-          </motion.div>
+          {serviceData.map((serviceItem, index) => (
+            <motion.div
+              key={index}
+              variants={childVariants}
+              className='col-lg-4'
+            >
+              <div className='service-text text-center'>
+                <img
+                  src={serviceItem.imgSrc}
+                  alt='icon'
+                  className='img-fluid'
+                />
+                <h5>{serviceItem.heading}</h5>
+                <p>{serviceItem.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </Wrapper>
